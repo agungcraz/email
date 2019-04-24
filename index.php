@@ -30,13 +30,13 @@ try {
     $mail->SMTPSecure = 'tls';
 
     /* Username (email address). */
-    $mail->Username = 'laurentiuskevin44@gmail.com';
+    $mail->Username = 'craz.devteam@gmail.com';
 
     /* Google account password. */
-    $mail->Password = 'epndbraguafjmdkj';
+    $mail->Password = 'grxulwagpvplkezk';
 
     /* Set the mail sender. */
-    $mail->setFrom('laurentiuskevin44@gmail.com', 'Laurentius Kevin');
+    $mail->setFrom('craz.devteam@gmail.com', 'Agung Wekaweka');
 // craz.devteam@gmail.com
 // 562015018@student.uksw.edu
     /* Add a recipient. */
