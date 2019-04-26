@@ -45,7 +45,7 @@ try {
     $mail->addAddress($email, $nama);
 
     /* Set the subject. */
-    $mail->Subject = date('H:i:s - d/m/Y');
+    $mail->Subject = "CODE REGRISTRATION Application WAPRON.ID' account. Date : ".date('d/m/Y - H:i:s');
 
     /* Set the mail message body. */
     $mail->Body = $html;
