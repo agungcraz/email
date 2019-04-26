@@ -1,6 +1,7 @@
 <?php
 $nama = $_GET['nama'];
 $email = $_GET['email'];
+$kodeVerifikasi= $_GET['kodeVerifikasi'];
 $html = file_get_contents('email-template.html');
 $html = str_replace('{ nama }',$nama,$html);
 /* Namespace alias. */
@@ -36,7 +37,7 @@ try {
     $mail->Password = 'grxulwagpvplkezk';
 
     /* Set the mail sender. */
-    $mail->setFrom('craz.devteam@gmail.com', 'Agung Wekaweka');
+    $mail->setFrom('craz.devteam@gmail.com', 'WAPRON.ID');
 // craz.devteam@gmail.com
 // 562015018@student.uksw.edu
     /* Add a recipient. */
