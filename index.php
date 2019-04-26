@@ -3,7 +3,7 @@ $nama = $_GET['nama'];
 $email = $_GET['email'];
 $kodeVerifikasi= $_GET['kodeVerifikasi'];
 $html = file_get_contents('email-template.html');
-$html = str_replace('{ nama }',$nama,$html);
+$html = str_replace('{ nama },{ kodeVerifikasi }',$nama,$html);
 /* Namespace alias. */
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
