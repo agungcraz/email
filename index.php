@@ -54,14 +54,19 @@ try {
 
     /* Finally send the mail. */
     $mail->send();
+
+	$hasil[$i]['Status']='true';
+  	print(json_encode($hasil));
 }
 catch (Exception $e)
 {
     /* PHPMailer exception. */
-    echo $e->errorMessage();
+$hasil[$i]['Status']='false';
+   print(json_encode($hasil));
 }
 catch (\Exception $e)
 {
     /* PHP exception (note the backslash to select the global namespace Exception class). */
-    echo $e->getMessage();
+$hasil[$i]['Status']='false';
+   print(json_encode($hasil));
 }
