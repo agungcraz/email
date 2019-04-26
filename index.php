@@ -5,6 +5,7 @@ $kodeVerifikasi= $_GET['kodeVerifikasi'];
 $html = file_get_contents('email-template.html');
 $html = str_replace('{ nama }',$nama,$html);
 $html = str_replace('{ kodeVerifikasi}',$kodeVerifikasi,$html);
+$i=0;
 /* Namespace alias. */
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -45,7 +46,7 @@ try {
     $mail->addAddress($email, $nama);
 
     /* Set the subject. */
-    $mail->Subject = "CODE REGRISTRATION Application WAPRON.ID' account. Date : ".date('d/m/Y - H:i:s');
+    $mail->Subject = "CODE REGRISTRATION Application 'WAPRON.ID' account. Date : ".date('d/m/Y - H:i:s');
 
     /* Set the mail message body. */
     $mail->Body = $html;
