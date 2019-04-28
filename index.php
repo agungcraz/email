@@ -1,9 +1,18 @@
 <?php
 $nama = $_GET['nama'];
 $email = $_GET['email'];
+$subject = $_GET['subject];
+$deskripsi1 = $_GET['deskripsi1'];
+$deskripsi2 = $_GET['deskripsi2'];
+$deskripsi3 = $_GET['deskripsi3'];
 $kodeVerifikasi= $_GET['kodeVerifikasi'];
+
 $html = file_get_contents('email-template.html');
 $html = str_replace('{ nama }',$nama,$html);
+$html = str_replace('{ subject }',$nama,$html);
+$html = str_replace('{ deskripsi1 }',$deskripsi1,$html);
+$html = str_replace('{ deskripsi2 }',$deskripsi2,$html);
+$html = str_replace('{ deskripsi3 }',$deskripsi3,$html);
 $html = str_replace('{ kodeVerifikasi}',$kodeVerifikasi,$html);
 $i=0;
 /* Namespace alias. */
@@ -46,7 +55,7 @@ try {
     $mail->addAddress($email, $nama);
 
     /* Set the subject. */
-    $mail->Subject = "CODE REGRISTRATION Application 'WAPRON.ID' account. Date : ".date('d/m/Y - H:i:s');
+    $mail->Subject = $subject.date('d/m/Y - H:i:s');
 
     /* Set the mail message body. */
     $mail->Body = $html;
